@@ -19,7 +19,7 @@ J = 0.5/m*(sum((hx - y).^2) + lambda*sum(theta(2:end).^2));
 
 
 grad = (1/m)*X'*(hx - y) + (lambda/m)*theta;
-grad(1) = grad(1) - (lambda/m)*theta(1);
+grad(1) = grad(1) - (lambda/m)*theta(1);    % don't apply regularization to bias unit
 % ====================== YOUR CODE HERE ======================
 % Instructions: Compute the cost and gradient of regularized linear 
 %               regression for a particular choice of theta.
